@@ -15,8 +15,6 @@ To answer this question we first needed to understand when and why a resident wo
 ## Data
 
 The data we obtained for this project we recieved from the university of Michigan as well as the Detroit Open Data Portal.
-
-source": [
     "    We synergized the data to the following collumns \n",
     "| column name | description |\n",
     "|-|-|\n",
@@ -33,12 +31,21 @@ source": [
     "| **structure* | whether there is a structure at the lot |\n",
     "| **condition** | general condition of the lot and structure |\n",
     "| **occupancy** | number of occupancy |\n",
-    "| **Needs Boardingt** | whether the building is in need of structural repair |\n",
+    "| **Needs Boarding** | whether the building is in need of structural repair |\n",
     "| **Fire** | whether the lot has suffered fire damage|\n",
     "| **Dumping** | Whether the lot has been used as a dumping ground |\n",
     "| **Units** | number of units at the site |
+    "| **Improved** | Whether a site has been improved upon or not |
+    "| **Maintained** | Whether a site has been maintained or not |
+    "| **coordinates** | combination of lat and lon |
+    "| **crime_count** | number crimes commited near a lot |
+
+
     
 ## Methodology
+For this project we started with very large data sets, so the first step was stripping down what we thought would be usefull and combining it all into one dataset. This is primarilly what the ingeniring notebook was used for. We also used this notebook to do some feature engineering with the crime_count. 
+
+After this was done we moved on to trying out different models with
 
 ## Results
 
