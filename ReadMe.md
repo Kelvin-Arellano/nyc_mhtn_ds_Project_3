@@ -1,6 +1,8 @@
 # Understanding and Predicting Blight Fine
 
 ## Overview
+![Blight](https://www.newstatesman.com/sites/default/files/styles/cropped_article_image/public/blogs_2014/07/lafayette.jpg?itok=0My_zKs4)
+
 
     For this project we wanted to better predict when someone in Detroit would not
     only allow their property to fall to blight but also not be compliant with the 
@@ -92,3 +94,7 @@ The synthesized data was analyzed and modeled. Some of the significant factors i
     "├── ingeniring.ipynb             <- Notebook Used for feature engineering before Modeling\n",
     "├── modules                      <- Saved models\n",
     "└── data                         <- Synergized Data obtained from University of Michigan and Detroit Open Data Portal\n",
+    
+**Authors** <br>
+[Ivan Vanko](https://github.com/vanitoz)<br>
+[Kelvin Arellano](https://github.com/Kelvin-Arellano)<br>
