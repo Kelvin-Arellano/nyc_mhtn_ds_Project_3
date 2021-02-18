@@ -58,10 +58,30 @@
     Next we decided to try a Decission tree model, this resulted in a much better 
     precission rate (.61), but the problem of a low F! score (.31) presisted. We 
     wanted to better tune our model for precision so we decided to use smote again, 
-    but the same
+    but the same problem aross of lowering the precession score to raise the F!.
 
+## Modeling
+Using Scikit-learn and IMBlearn packages 7 classification models were crated.
+- Logerithmic Regression 
+- Logerithmic Regression with SMOTE
+- Decession Tree 
+- Decession Tree with SMOTE
+- Random Forest
+- Decission Tree with GridSearchCV
+- AdaBoost Gradient Boosting and Weak Learners
+
+It was determined that the Random Forest model perfromed the best and was utilized for the final implementation. 
 
 ## Conclusion
+The synthesized data was analyzed and modeled. Some of the significant factors in determining if someone was going to pay on time were Judgement amount, crime count, disposition, and the condition of the lot. Applying the Scikit-learn Models we were able to get a precision score of 91%. The feature that had the most impact was judgement amount
+
+
+## Future Work
+-Tune the Model to better predict on both Recall and Precision
+-Better synthesize the data to account for Nan and null values
+-Apply a multivariable classification to include people who didn't pay on time but still paid.
+
+## Repository Structure
 
     "├── README.md                    <- The top-level README for reviewers of this project\n",
     "├── moduling.ipynb               <- Notebook that gpes pver out modling process\n",
