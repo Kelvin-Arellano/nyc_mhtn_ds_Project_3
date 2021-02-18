@@ -2,52 +2,36 @@
 
 ## Overview
 
-For this project we wanted to better predict when someone in Detroit would not only allow their property to fall to blight but also not be compliant with the fines issued afterwards.
+    For this project we wanted to better predict when someone in Detroit would not only allow their property to fall to blight but also not be compliant with the fines issued afterwards.
 
-We based this project on a data challange from the Michigan Data Science Team (MDST) and the MIchigan Student Symposium for Interdisciplinary Statistical Sciences (MSSISS). They partnered with the City Detroit to better understand this problem.
+    We based this project on a data challange from the Michigan Data Science Team (MDST) and the MIchigan Student Symposium for Interdisciplinary Statistical Sciences (MSSISS). They partnered with the City Detroit to better understand this problem.
 
-Blight, allowing your property to fall into and remain in ruin,  has become a serious problem in Detroit. Every year the city issues millions of dollars in fines to violators and every year many of those tickets go unpaid. Following up and enforcing these fines can become extremely costly as well and as such they want to use predictive analytics to increase ticket compliance.
-
-
-To answer this question we first needed to understand when and why a resident would not comply with a blight violation. This is the task, understanding the factors that play into that, be they categorical or numerical.
+    Blight, allowing your property to fall into and remain in ruin,  has become a serious problem in Detroit. Every year the city issues millions of dollars in fines to violators and every year many of those tickets go unpaid. Following up and enforcing these fines can become extremely costly as well and as such they want to use predictive analytics to increase ticket compliance.
 
 
-## Data
-
-The data we obtained for this project we recieved from the university of Michigan as well as the Detroit Open Data Portal.
-    "    We synergized the data to the following collumns \n",
-    "| column name | description |\n",
-    "|-|-|\n",
-    "| **ticket_id** | unique ID for each ticket |\n",
-    "| **agency_name** | Agency issuing the ticket |\n",
-    "| **disposition** | Describing the at fault party |\n",
-    "| **discount_amount** | penalty reduction |\n",
-    "| **judgement amount** | Penalty amount |\n",
-    "| **compliance** | known compliance result for ticket |\n",
-    "| **lon** | longitude |\n",
-    "| **lat** | lattitude |\n",
-    "| **parcel_id** | unique ID for each lot |\n",
-    "| **AddCombo** | Street number and street name for lot |\n",
-    "| **structure* | whether there is a structure at the lot |\n",
-    "| **condition** | general condition of the lot and structure |\n",
-    "| **occupancy** | number of occupancy |\n",
-    "| **Needs Boarding** | whether the building is in need of structural repair |\n",
-    "| **Fire** | whether the lot has suffered fire damage|\n",
-    "| **Dumping** | Whether the lot has been used as a dumping ground |\n",
-    "| **Units** | number of units at the site |
-    "| **Improved** | Whether a site has been improved upon or not |
-    "| **Maintained** | Whether a site has been maintained or not |
-    "| **coordinates** | combination of lat and lon |
-    "| **crime_count** | number crimes commited near a lot |
+    To answer this question we first needed to understand when and why a resident would not comply with a blight violation. This is the task, understanding the factors that play into that, be they categorical or numerical.
 
 
     
 ## Methodology
-For this project we started with very large data sets, so the first step was stripping down what we thought would be usefull and combining it all into one dataset. This is primarilly what the ingeniring notebook was used for. We also used this notebook to do some feature engineering with the crime_count. 
-
-After this was done we moved on to trying out different models with
+1. Merge the data along usefull columns and synthesize a more useable dataset
+2. Perform EDA with statistical analysis to determine statistically significant features as well as dropping nan values and useless features.
+3. Test baseline model and tune to Precision
+4. Test different models with different hyper perameters and use cross validation
+5. Implement the different models to preform on the data set and categorize the values
 
 ## Results
+
+    For this project we started with very large data sets, so the first step was stripping down what we thought would be usefull and combining it all into one dataset. This is primarilly what the ingeniring notebook was used for. We also used this notebook to do some feature engineering with the crime_count. 
+
+    After this was done we moved on to trying out different models with the synthesized data. In. order to get a minimum for how much money we can expect for the budgest we decided to go with precision. This would allow us to be certain and correctly allocate revenue with flase negatives giving us an upper bound on the budget. 
+    
+    With this in mind we decided to start with a baseline model using Logistic Regression. With this model we were able to get a precision score of .61. This isn't a terrible score but because of the class imbalance we got a low F1 score (.03). As a result we decided to try and fix this imbalance using SMOTE, this did help with the F! score  (.33), but drastically reduced our precision rate (.23). 
+    
+    With this in mind we decided to move forward with tuning for precision, as we wanted to be certain that the stated amount would come through and an upper bound on the budget would only be a possitive thing. 
+    
+    Next we decided to try a Decission tree model, this resulted in a much better precission rate (.61), but the problem of a low F! score (.31) presisted. We wanted to better tune our model for precision so we decided to use smote again, but the same
+
 
 ## Conclusion
 
