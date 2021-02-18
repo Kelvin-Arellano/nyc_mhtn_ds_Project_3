@@ -44,14 +44,12 @@ source": [
 
 ## Conclusion
 
-├── README.md                           <- The top-level README for reviewers of this project\n",
-    "├── Project_Walkthrough.ipynb           <- Narrative documentation of analysis in Jupyter notebook\n",
-    "├── Pneumonia-ID.pdf                    <- PDF version of project presentation\n",
-    "├── src                                 <- Contains python modules\n",
-    "│   └── modules                         <- .py files\n",
-    "├── images                              <- Both sourced externally and generated from \n",
-    "│                                          code\n",
-    "├── notebooks                           <- Noteboooks used to build Walkthrough\n",
-    "├── models                              <- Saved models\n",
-    "└── data                                <- Data obtained from the Census Bureau\n",
-    "    └── extracted                       <- .py files
+    "├── README.md                           <- The top-level README for reviewers of this project\n",
+    "├── moduling.ipynb                      <- Notebook that gpes pver out modling process\n",
+    "├── ingeniring_utils.py                 <- Contains python feature functions\n",
+    "├── modeling_utils.py                   <- Contains python module functions\n",
+    "├── images                              <- Both sourced externally and generated from Code\n",       
+    "│                                          n",
+    "├── ingeniring.ipynb                          <- Notebook Used for feature engineering before Modeling\n",
+    "├── modules                              <- Saved models\n",
+    "└── data                                <- Synergized Data obtained from University of Michigan and Detroit Open Data Portal\n",
